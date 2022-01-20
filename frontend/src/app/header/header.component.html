@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-blue">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="Angular Project" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      (click)="toggleNavbarCollapsing()" aria-controls="navbarCollapse" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.collapse]="navbarCollapsed" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/articles" routerLinkActive="active">Articles</a>
+        </li>
+
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/signin" routerLinkActive="active">Sign In</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="onSignOut()">Sign Out</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- <ul>
+        <li class="nav-item active">
+          <a class="nav-link">{{userName}}</a>
+        </li>
+      </ul> -->
+
+    </div>
+  </div>
+</nav>

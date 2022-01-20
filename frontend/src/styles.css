@@ -1,0 +1,100 @@
+
+/* You can add global styles to this file, and also import other style files */
+h1 {font-size: 2.4rem;margin-bottom: 30px;}
+.bg-blue {background-color:#79ce1d;}
+.navbar-brand img { height:30px; }
+.navbar-dark .navbar-nav .nav-link {color:#fff;}
+.navbar-dark .navbar-nav .active .nav-link {color:#fff;}
+.banner img {width:100%;}
+.title-heading{clear: both; width: 100%;padding: 10px;text-align: center;margin-bottom: 20px;}
+.blog-box {text-align: center; margin-bottom: 20px;padding: 10px;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0px 2px 2px 1px #f6f6f6;
+}
+.blog-box h3 { margin:20px 0; font-size:22px; color:#000;}
+.blog-box p { color:#666; }
+.blog-box span, .posted-on span { font-style: italic; color:#000; }
+.blog-box img { width:100%; }
+.mtb-40 { margin:40px 0; min-height:450px;}
+.banner-box {position: relative;}
+.intro-text { width:100%; position: absolute; top:30%; text-align: center; color:#fff;}
+.intro-text-box { width: 62%;margin: auto;background-color: rgba(96, 96, 96, 0.6);padding: 20px;border: 10px solid #808080;}
+.intro-text-box h1 {font-size:3em;}
+
+.blog-right h3 {background-color:#000;color: #fff; padding:5px 15px;font-size:20px;}
+.detail-img {margin:40px 0px;}
+.rb-box-img { margin-right:15px; }
+.rb-box-img img { width:100px;}
+.rb-box {display: flex;}
+.rb-box-desc h4 {font-size:20px;color:#000;font-weight: 600;}
+.rb-box-desc p {color:#666;}
+.rb-box {margin-bottom:10px;}
+.recent-post a:hover {text-decoration: none;}
+.recent-post a:hover h4 {color:#007EDB;}
+
+.categories {margin-top:20px;}
+.categories ul {padding:0;margin:0; list-style: none;}
+.categories ul li { border-bottom:1px dotted #ccc; padding:5px 0px; }
+.categories ul li a {color:#333; display: block;}
+.categories ul li a:hover {color:#007EDB; text-decoration: none;}
+.body-content { min-height:380px; }
+.error-404 { text-align: center; }
+.error-404 h1{ font-size:10em; }
+.service-error {text-align:center; padding:50px 0;}
+.service-error h1 { font-size: 3em;text-transform: uppercase;color:#007EDA;}
+
+/* For Admin*/
+
+.login-box {box-shadow: 1px 1px 7px #666;padding:20px;margin-top:10%;}
+.login-box h1 {font-size:24px;text-align: center;margin-bottom: 20px}
+.dash-left ul {padding:0;margin:0;list-style:none;}
+.dash-left ul li { background-color: #f1f1f1; margin-bottom:5px;}
+.dash-left ul li a {color:#333; padding:5px 15px; display: block;}
+.dash-left ul li:hover a {background-color:#007EDB; text-decoration: none; color:#fff;}
+.dash-left ul li a.active {background-color:#007EDB; color:#fff;}
+.dash-header {display:flex; justify-content: space-between;}
+.table img { width:80px; }
+
+footer {background-color: #000;color:#fff; padding:20px;}
+
+/* For validation*/
+
+.ng-valid[required], .ng-valid.required {border: 1px solid #42A948;}
+.error {color:#ff0000;}
+.success { color:green; }
+.contact-message { text-align: center; }
+
+@media (max-width: 767px) {
+.intro-text {display: none;}
+}
+
+
+.blog-list .blog-box{
+    text-align: left;
+}
+.blog-list .blog-box h3 {
+    margin: 5px 0;
+    font-size: 22px;
+    color: #000;
+}
+.blog-list .blog-box p{
+    margin-bottom: 5px;
+}
+.blog-list .blog-box .readmore{
+    color:blue;
+}
+.widget{text-align: left; margin-bottom: 20px;padding: 15px;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0px 2px 2px 1px #f6f6f6;}
+    .widget p{margin-bottom: 5px;}
+    .widget a{text-decoration: none;}
+    .widget .rb-box{
+        border-bottom: 1px solid #f6f6f6;
+    }
+ .widget-title{
+     text-align: left;
+     width: 100%;
+     margin: 15px auto;
+     display: inline-block;
+ }
+ .detail-img img{width:100%;}

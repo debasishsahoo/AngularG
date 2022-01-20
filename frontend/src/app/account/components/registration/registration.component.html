@@ -1,0 +1,113 @@
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div *ngIf="isLoading" style="text-align: center" class="loading-text">
+      <!-- <app-spinner></app-spinner> -->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="blog-left">
+          <h1>Registration Form</h1>
+
+          <div class="blog-desc">
+            <!--Section: Contact v.2-->
+            <section class="mb-4">
+              <!--Section description-->
+              <p class="text-center w-responsive mx-auto mb-5">
+                Do you have any questions? Please do not hesitate to contact us
+                directly. Our team will come back to you within a matter of
+                hours to help you.
+              </p>
+
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                  <form #authForm="ngForm" (ngSubmit)="onSignUp(authForm)">
+                    <!--Grid row-->
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="email" class="">Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            ngModel
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid row-->
+                    <!--Grid row-->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="name" class="">Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            ngModel
+                            name="name"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="mobile" class="">Mobile</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            ngModel
+                            name="mobile"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="password" class="">Password</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            ngModel
+                            name="password"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid row-->
+                    <div class="text-center text-md-left">
+                      <button
+                        class="btn btn-primary"
+                        [disabled]="!authForm.valid"
+                        type="submit"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </form>
+                  <div class="status"></div>
+                </div>
+                <!--Grid column-->
+              </div>
+            </section>
+            <!--Section: Contact v.2-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

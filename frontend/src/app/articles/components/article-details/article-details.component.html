@@ -1,0 +1,35 @@
+<section class="blog-detail mtb-40">
+    <div class="container">
+        <div *ngIf="isLoading" style="text-align: center" class="loading-text">
+            <app-spinner></app-spinner>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog-left" *ngIf="article">
+                    <h1>{{article.title}}</h1>
+                    <div class="posted-on">
+                        <p>by <span>{{article.creatername}}</span> on <span>{{article.createdAt|date:'short'}}</span>
+                        </p>
+                    </div>
+                    <div class="detail-img">
+                        <img src={{article.image}} alt={{article.title}}>
+                    </div>
+                    <div class="blog-desc">
+                        {{article.body}}
+                    </div>
+                    <div *ngIf="isAuth && article.creatorid===userId">
+                        <button class="btn btn-primary" type="button" [routerLink]="['/edit', article.id]">Edit
+                            Article</button>|
+                        <button class="btn btn-primary" type="button" (click)="onDeletePost(article.id)">Delete
+                            Article</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <app-featured-articles></app-featured-articles>
+                <app-categories></app-categories>
+            </div>
+        </div>
+    </div>
+</section>

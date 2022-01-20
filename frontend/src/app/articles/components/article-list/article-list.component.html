@@ -1,0 +1,154 @@
+<section class="blog-list mtb-40">
+  <div class="container">
+    <h1>Article List</h1>
+    <a routerLink="/create" class="btn btn-primary">Create Article</a>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img1.jpeg" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>AngularJS development services</h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  The Angular announcement bar is an excellent way to promote a
+                  special discount offer, a sale, or another type of
+                  promotion...
+                </p>
+                <a href="/article/1" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img2.png" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>Transpilation in Angular</h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  Transpilation = translate + compilation The Angular compiler
+                  translates the html template to super optimized JavaScript
+                  code...
+                </p>
+                <a href="/article/2" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img3.jpeg" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>Difference between JavaScript and TypeScript</h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  What is JavaScript? JavaScript is an object-based scripting
+                  language. JavaScript is the most popular programming language
+                  of HTML...
+                </p>
+                <a href="/article/3" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img4.jpg" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>How to use cookies in angular</h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  What is Cookies in Angular? Cookies are small packages of
+                  information that can be temporarily stored/saved by your
+                  browser ...
+                </p>
+                <a href="/article/4" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img5.jpeg" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>
+                  How to Get Current Visitor Location using HTML5 Geolocation
+                  API
+                </h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  This feature Get Current Visitor Location helps to provide the
+                  website visitor with a better browsing experience...
+                </p>
+                <a href="/article/5" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="assets/images/img6.jpeg" alt="blog1" />
+              </div>
+              <div class="col-md-8">
+                <h3>What is MERN Stack?</h3>
+                <p>by <span>Debasish Sahoo</span></p>
+                <p>
+                  In the world of software development, MERN Stack is one of the
+                  most widely used technological stacks and a web development
+                  framework...
+                </p>
+                <a href="/article/6" class="readmore">Read more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <app-featured-articles></app-featured-articles>
+        <app-categories></app-categories>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8" *ngFor="let article of articles; let i = index">
+        <div class="col-md-12">
+          <div class="blog-box">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="'{{ article.image }}'" alt="'{{ article.title }}'" />
+              </div>
+              <div class="col-md-8">
+                <h3>{{ article.title }}</h3>
+                <p>
+                  by <span>{{ article.creatorid }}</span> on
+                  <span>{{ article.createdAt | date: "short" }}</span>
+                </p>
+                <p>{{ article.body | slice: 0:170 }}</p>
+
+                <a [routerLink]="['/article', article.id]">...Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>

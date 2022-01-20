@@ -1,0 +1,99 @@
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="blog-left">
+          <h1>Registration</h1>
+
+          <div class="blog-desc">
+            <!--Section: Contact v.2-->
+            <section class="mb-4">
+              <!--Section description-->
+              <p class="text-center w-responsive mx-auto mb-5">
+                Do you have any questions? Please do not hesitate to contact us
+                directly. Our team will come back to you within a matter of
+                hours to help you.
+              </p>
+
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                    <!--Grid row-->
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="email" class="">email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            ngModel
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <label for="password" class="">password</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            ngModel
+                            name="password"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid row-->
+                    <div class="text-center text-md-left">
+                      <button
+                        class="btn btn-primary"
+                        [disabled]="!authForm.valid"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </form>
+                  <div class="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 text-center">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <i class="fas fa-map-marker-alt fa-2x"></i>
+                      <p>Kolkata , India-700025</p>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-phone mt-4 fa-2x"></i>
+                      <p>+91-9681224048</p>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-envelope mt-4 fa-2x"></i>
+                      <p>debasish.sahoo96@gmail.com</p>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+              </div>
+            </section>
+            <!--Section: Contact v.2-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
